@@ -1,7 +1,0 @@
-/home/nuran/projects/UPG/dashboard/src/main/java/lk/payments/dashboard/core/remote/ejb/DashboardServiceBean.java
-/home/nuran/projects/UPG/dashboard/src/main/java/lk/payments/dashboard/core/dao/electricityBill/ElectricityBillDao.java
-/home/nuran/projects/UPG/dashboard/src/main/java/lk/payments/dashboard/core/service/dashboard/DashboardNotificationService.java
-/home/nuran/projects/UPG/dashboard/src/main/java/lk/payments/dashboard/core/service/dashboard/impl/DashboardNotificationServiceImpl.java
-/home/nuran/projects/UPG/dashboard/src/main/java/lk/payments/dashboard/core/service/electricityBill/impl/ElectricityBillServiceImpl.java
-/home/nuran/projects/UPG/dashboard/src/main/java/lk/payments/dashboard/core/service/electricityBill/ElectricityBillService.java
-/home/nuran/projects/UPG/dashboard/src/main/java/lk/payments/dashboard/core/dao/electricityBill/impl/ElectricityBillDaoImpl.java
