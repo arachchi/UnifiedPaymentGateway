@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sec:beans xmlns:sec="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:aop="http://www.springframework.org/schema/aop"
+         xmlns:tx="http://www.springframework.org/schema/tx"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx
+           http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+    <!-- the parent application context definition for the payments.lk application -->
+
+    <sec:bean id="filterChainProxy" class="org.springframework.security.web.FilterChainProxy">
+      <sec:filter-chain-map path-type="ant">
+         <sec:filter-chain pattern="/webServices/**" filters="
+               securityContextPersistenceFilterWithASCFalse,
+               basicAuthenticationFilter,
+               exceptionTranslationFilter,
+               filterSecurityInterceptor" />
+         <sec:filter-chain pattern="/**" filters="
+               securityContextPersistenceFilterWithASCTrue,
+               formLoginFilter,
+               exceptionTranslationFilter,
+               filterSecurityInterceptor" />
+      </sec:filter-chain-map>
+
+    </sec:bean>
+
+
+</sec:beans>
+

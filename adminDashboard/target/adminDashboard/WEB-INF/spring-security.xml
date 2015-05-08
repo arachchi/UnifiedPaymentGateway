@@ -1,0 +1,35 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+			 xmlns:beans="http://www.springframework.org/schema/beans"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xmlns:jee="http://www.springframework.org/schema/jee"
+			 xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+			 xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.2.xsd
+http://www.springframework.org/schema/jee
+http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+	<http auto-config="true">
+		<intercept-url pattern="/" access="ROLE_ADMIN" />
+		<form-login
+				login-page="/login"
+				default-target-url="/adminDashboard"
+				authentication-failure-url="/login?error"
+				username-parameter="username"
+				password-parameter="password" />
+		<logout logout-success-url="/login?logout" />
+		<!-- enable csrf protection -->
+		<csrf/>
+	</http>
+	<jee:jndi-lookup id="data-source" jndi-name="java:/mysql" expected-type="javax.sql.DataSource" />
+	<authentication-manager alias="security">
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="data-source"
+							   users-by-username-query=
+									   "select username,password, enabled from T_USERS where username=?"
+							   authorities-by-username-query=
+									   "select username, role from T_USER_ROLES where username =? " />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

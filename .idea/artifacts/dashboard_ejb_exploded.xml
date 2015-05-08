@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="dashboard:ejb exploded">
+    <output-path>$PROJECT_DIR$/dashboard/target/dashboard</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="dashboard/ejb/EJB" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/dashboard/target/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/payBuilder/META-INF/persistence.xml" />
+      </element>
+      <element id="module-output" name="dashboard" />
+    </root>
+  </artifact>
+</component>

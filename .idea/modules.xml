@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/adminDashboard/adminDashboard.iml" filepath="$PROJECT_DIR$/adminDashboard/adminDashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payBuilder/builder-pay.iml" filepath="$PROJECT_DIR$/payBuilder/builder-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dashboard/dashboard.iml" filepath="$PROJECT_DIR$/dashboard/dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleApi/moduleapi.iml" filepath="$PROJECT_DIR$/moduleApi/moduleapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pay.iml" filepath="$PROJECT_DIR$/pay.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="builder-pay:ear">
+    <output-path>$PROJECT_DIR$/payBuilder/target</output-path>
+    <root id="archive" name="payHybrid.ear">
+      <element id="artifact" artifact-name="builder-pay:ear exploded" />
+    </root>
+  </artifact>
+</component>
